@@ -13,8 +13,8 @@ $(document).ready(function() {
         var spp = parseInt($("#spp").val());
         var wpp = parseInt($("#wpp").val());
         var cpw = parseInt($("#cpw").val());
-        var unit_pp = parseInt($("#unit_pp").val());
-        var cp_unit = parseInt($("#cp_unit").val());
+        var unit_pp = parseFloat($("#unit_pp").val());
+        var cp_unit = parseFloat($("#cp_unit").val());
                     
         if (isNaN(cps) && isNaN(cpw)) {
             msg = "Please fill in the first three fields or"
