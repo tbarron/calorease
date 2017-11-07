@@ -15,65 +15,84 @@
   <center>
     <h3>Calories per Pound</h3></center>
 
-<p>Enter calories per serving, servings per package, and ounces (or grams) per package,</p>
+  <table>
+    <tr>
+      <td width="30%"></td>
+      <td width="40%">
+        <ul>
+        <li><p>Enter calories per serving, servings per package, and ounces (or
+        grams) per package (the pink fields),</p>
 
-<p>OR just enter calories per ounce (or gram),</p>
+        <li><p>OR just enter calories per ounce or gram (the blue field) ,</p>
 
-<p>then press Calculate to compute calories per pound.</p>
+        <li><p>then press Calculate to compute calories per pound (the
+        lavender field).</p>
 
-<p>Pressing Clear will reset the form.</p>
+        <li><p>Pressing Clear will reset the form.</p>
 
-<p>To compute calories per gram, enter the first three values, select 'Gram' in the Calories per Ounce/Gram selection list, and press Calculate.</p>
+        <li><p>If you have calories per ounce (or gram), and want calories
+        per pound, leave the first three (pink) fields blank, select the
+        desired weight unit in the calories per ounce/gram selection list,
+        enter the number of calories per unit weight, and press
+        Calculate.</p>
+        </ul>
+    </td><td width="30%"></td></tr></table>
 
 <center>
-    <table>
+  <table class="package" width="360">
         <tr>
-            <td>calories per serving (cps):</td>
+            <td width="65%">calories per serving (cps):</td>
             <td>
-                <input type="text" id="cps"><!-- value="10"-->
+                <input type="text" id="cps" tabindex=1>
             </td>
         </tr>
         <tr>
             <td>servings per package (spp):</td>
             <td>
-                <input type="text" id="spp"><!-- value="12"-->
+                <input type="text" id="spp" tabindex=2>
             </td>
         </tr>
         <tr>
             <td>
-                <select id="unit_pp">
+                <select id="unit_pp" tabindex=0>
                     <option value="16">ounces</option>
-                    <option value="480">grams</option>
+                    <option value="453.6">grams</option>
                 </select> per package (wpp):</td>
             <td>
-                <input type="text" id="wpp"><!-- value="2"-->
+                <input type="text" id="wpp" tabindex=3>
             </td>
         </tr>
+  </table>
+  <table class="weight" width="360">
         <tr>
-            <td>calories per
-                <select id="cp_unit">
+            <td width="65%">calories per
+                <select id="cp_unit" tabindex=0>
                     <option value="16">ounce</option>
-                    <option value="480">gram</option>
+                    <option value="453.6">gram</option>
                 </select> (cpw):</td>
             <td>
                 <input type="text" id="cpw">
             </td>
         </tr>
+  </table>
+  <table class="result" width="360">
         <tr>
-            <td>calories per pound (cpp):</td>
+            <td width="65%">calories per pound (cpp):</td>
             <td>
-                <input type="text" id="cpp">
+                <input type="text" id="cpp" disabled>
             </td>
         </tr>
+  </table>
+  <table width="360">
         <tr>
             <td align="center">
-                <input type="submit" id="calc" value="Calculate">
+                <input type="submit" id="calc" value="Calculate" tabindex=4>
             </td>
             <td align="center">
                 <input type="submit" id="clear" value="Clear">
             </td>
         </tr>
-    </table>
+  </table>
 
 </center>
 
